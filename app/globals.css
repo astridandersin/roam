@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --font-inter: "Inter", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-board: "VT323", "IBM Plex Mono", ui-monospace, monospace;
+  /* Kept as system fallbacks for any consumer of these variables; the
+     full-featured display/serif fonts were dropped because no component
+     actually used them in the final design. */
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-display: "Helvetica Neue", Helvetica, system-ui, sans-serif;
+}
+
+/* Departures-board headline, VT323 dot-matrix, all caps. Used together
+   with the <FlipText> component so each character split-flaps into place
+   when the section scrolls into view. */
+.display-headline {
+  font-family: var(--font-board);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+.display-headline em {
+  font-style: normal;
+  color: #F4C430;
+  letter-spacing: 0.03em;
+}
+.display-headline strong {
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+/* Split-flap cell, each glyph has its own box. While the cell is showing
+   a random character on the way to the final one, aria-hidden is true and
+   we add a faint shadow to mimic the mechanical flap settling. */
+.flip-cell {
+  transition: filter 80ms ease-out;
+}
+.flip-cell[aria-hidden="true"] {
+  filter: brightness(0.88) blur(0.25px);
+}
+
+/* Words wrap as a single unit, line breaks can only happen at the spaces
+   between words, never mid-word, even though each character is its own
+   inline-block flip cell. */
+.flip-word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Modal compositor & paint hygiene ---------------------------------------
+   The two place / city modals are fixed-position overlays; promote them
+   to their own compositor layer so their paint doesn't dirty the
+   underlying page, and limit paint/layout containment to inside them.
+   Also add a tiny entry transition so they don't pop in cold. */
+.modal-shell {
+  contain: layout paint style;
+  will-change: opacity;
+  animation: modal-fade-in 140ms ease-out both;
+}
+@keyframes modal-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Each place tile inside the city panel: tell the browser it can skip
+   layout & paint when the tile is scrolled out of view. With ~19 tiles
+   per panel this measurably smooths scroll on the SF panel especially. */
+.place-tile {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 112px;
+}
+
+html,
+body {
+  background: #050505;
+  color: #F2EFE8;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Make scroll-driven UI cheap: rely on the compositor and avoid layout
+     thrash when sections enter/exit the viewport. */
+  text-rendering: optimizeSpeed;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #F4C430;
+  color: #050505;
+}
+
+/* Subtle scanline / grain to evoke a real CRT board.
+   The repeating-linear-gradient runs at 3-pixel pitch which means the
+   browser paints thousands of fine lines on every reflow. Inside a
+   modal panel (.modal-shell > .board-surface) we drop the scanlines
+   to keep scrolling silky; the radial glow alone reads just as warm. */
+.board-surface {
+  background:
+    radial-gradient(ellipse at top, rgba(244, 196, 48, 0.04), transparent 60%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.012) 0px,
+      rgba(255, 255, 255, 0.012) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    #050505;
+}
+.modal-shell.board-surface {
+  background:
+    radial-gradient(ellipse at top, rgba(244, 196, 48, 0.04), transparent 60%),
+    #050505;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Hairline rule used like an airport sign separator */
+.hairline {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(242, 239, 232, 0.18) 12%,
+    rgba(242, 239, 232, 0.18) 88%,
+    transparent 100%
+  );
+  height: 1px;
+}
+
+/* Scrollbar tuning so the page feels "instrument panel" */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2a;
+}
+
+/* Globe canvas: ensure it never shows a white flash on hydrate */
+.globe-shell canvas {
+  background: transparent !important;
+  display: block;
+}
+
+/* Section-level containment so each scroll-section is independently
+   composited. Big perf win on long pages because the browser doesn't
+   re-layout the whole document when the contents of one section
+   change. */
+.roam-section {
+  contain: layout paint;
+}
+
+/* Departures-board glyph treatment */
+.board-text {
+  font-family: var(--font-board), var(--font-mono), ui-monospace, monospace;
+  letter-spacing: 0.16em;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* Marquee dot characters used as separators on the board */
+.diamond::before {
+  content: "◆";
+  color: rgba(244, 196, 48, 0.5);
+  margin: 0 0.55rem;
+  font-size: 0.55em;
+  vertical-align: 0.2em;
+}
+
+/* Cities-marquee, slides cards in from the left. The track holds two copies
+   of the city list, so animating translateX(-50% → 0) loops seamlessly. */
+@keyframes roam-marquee-right {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.marquee-track {
+  animation: roam-marquee-right 90s linear infinite;
+  /* Promote to its own compositor layer and tell the browser the only
+     property that changes is transform, so it can keep this off the
+     main thread. */
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  contain: layout paint;
+  backface-visibility: hidden;
+}
+.marquee-track:hover,
+.marquee-track:focus-within {
+  animation-play-state: paused;
+}
+/* Also pause the marquee while a modal is open so the backdrop behind
+   the modal isn't being re-rasterised every frame for content the user
+   can't see. */
+body[data-modal-open] .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-duration: 0s;
+  }
+}
+
+/* Soft fade on both edges so the cards don't hard-clip against the viewport. */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 4%,
+    #000 96%,
+    transparent 100%
+  );
+}
