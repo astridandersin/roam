@@ -34,7 +34,7 @@ const KINDS: PlaceKind[] = [
   "Accelerator",
   "Founder House",
   "Big Tech",
-  "Entrepreneurship Society",
+  "Startup Ecosystem",
   "Alumni",
   "Event",
 ];

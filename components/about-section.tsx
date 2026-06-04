@@ -17,7 +17,7 @@ export function AboutSection() {
     { value: countBy("Big Tech"), label: "Big Tech" },
     { value: countBy("VC"), label: "VCs" },
     { value: countBy("Accelerator"), label: "Accelerators" },
-    { value: countBy("Entrepreneurship Society"), label: "E. Societies" },
+    { value: countBy("Startup Ecosystem"), label: "Ecosystems" },
     { value: countBy("Alumni"), label: "Alumni" },
     { value: cityCount, label: "Cities" },
     { value: countryCount, label: "Countries" },

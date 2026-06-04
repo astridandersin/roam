@@ -3,7 +3,7 @@ export type PlaceKind =
   | "VC"
   | "Accelerator"
   | "Founder House"
-  | "Entrepreneurship Society"
+  | "Startup Ecosystem"
   | "Big Tech"
   | "Alumni"
   | "Event";

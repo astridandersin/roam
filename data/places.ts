@@ -141,7 +141,7 @@ export const places: Place[] = [
     id: "uc-berkeley-scet",
     cityId: "sf",
     name: "UC Berkeley SCET",
-    kind: "Entrepreneurship Society",
+    kind: "Startup Ecosystem",
     firstVisited: "2026-02-20",
     website: "https://scet.berkeley.edu",
     photos: [
@@ -425,7 +425,7 @@ export const places: Place[] = [
     id: "friends-and-family",
     cityId: "sf",
     name: "Friends and Family",
-    kind: "Entrepreneurship Society",
+    kind: "Startup Ecosystem",
     firstVisited: "2026-02-25",
     website: "https://friendsandfam.xyz",
     photos: [
@@ -466,7 +466,7 @@ export const places: Place[] = [
     id: "bases",
     cityId: "sf",
     name: "BASES",
-    kind: "Entrepreneurship Society",
+    kind: "Startup Ecosystem",
     firstVisited: "2026-02-26",
     website: "https://www.bases.stanford.edu",
     photos: [

@@ -12,7 +12,7 @@ const KIND_ORDER = [
   "Accelerator",
   "Founder House",
   "Big Tech",
-  "Entrepreneurship Society",
+  "Startup Ecosystem",
   "Alumni",
   "Event",
 ] as const;
@@ -216,8 +216,8 @@ function pluralKind(kind: (typeof KIND_ORDER)[number]): string {
       return "FOUNDER HOUSES";
     case "Big Tech":
       return "BIG TECH";
-    case "Entrepreneurship Society":
-      return "ENTREPRENEURSHIP SOCIETIES";
+    case "Startup Ecosystem":
+      return "STARTUP ECOSYSTEMS";
     case "Alumni":
       return "ALUMNI";
     case "Event":
