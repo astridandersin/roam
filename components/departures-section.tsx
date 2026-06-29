@@ -53,9 +53,11 @@ type Row = {
 // All entries from the AaltoES 2026 February SF board trip share a fixed
 // "flight" code and gate label so the board reads as a single delegation.
 const AES26_PREFIX = "2026-02";
+const IR26_PREFIX = "2026-04";
 
 function flightCode(p: Place, idx: number) {
   if (p.firstVisited.startsWith(AES26_PREFIX)) return "AES01";
+  if (p.firstVisited.startsWith(IR26_PREFIX)) return "IR01";
   const letter = p.kind[0].toUpperCase();
   const num = (1000 + ((idx * 37) % 8999)).toString().padStart(4, "0");
   return `${letter}${num}`;
@@ -63,6 +65,7 @@ function flightCode(p: Place, idx: number) {
 
 function gateCode(p: Place, idx: number) {
   if (p.firstVisited.startsWith(AES26_PREFIX)) return "B26";
+  if (p.firstVisited.startsWith(IR26_PREFIX)) return "ES26";
   const letter = "ABCDEFGH"[idx % 8];
   const num = (1 + ((idx * 7) % 24)).toString().padStart(2, "0");
   return `${letter}${num}`;

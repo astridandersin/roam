@@ -1,10 +1,5 @@
 import type { City, Place } from "@/lib/types";
 
-/**
- * SAMPLE DATA, replace with the real Roam log.
- * Coordinates are city-center approximations.
- */
-
 export const cities: City[] = [
   {
     id: "sf",
@@ -27,45 +22,21 @@ export const cities: City[] = [
     iata: "ARN",
     lat: 59.3293,
     lng: 18.0686,
-    firstVisited: "2024-03-04",
+    firstVisited: "2026-04-01",
     blurb:
-      "Closest world-class hub. Strong consumer DNA, deep operator network, two hours from Helsinki.",
+      "Closest world-class hub with Scandinavia's strongest operator network. The April 2026 interrail delegation visited investor funds, builder communities, and the student societies shaping the Nordic tech generation.",
   },
   {
-    id: "london",
-    name: "London",
-    country: "United Kingdom",
-    countryCode: "GBR",
-    iata: "LHR",
-    lat: 51.5074,
-    lng: -0.1278,
-    firstVisited: "2024-10-21",
-    blurb:
-      "Europe's deepest capital pool. Roam delegations meet UK funds, AI labs and Finnish founders scaling out of London.",
-  },
-  {
-    id: "brussels",
-    name: "Brussels",
-    country: "Belgium",
-    countryCode: "BEL",
-    iata: "BRU",
-    lat: 50.8503,
-    lng: 4.3517,
-    firstVisited: "2025-02-10",
-    blurb:
-      "Interrail leg with TRES & LUTES. Policy proximity, EU-tech corridor, surprisingly strong deeptech.",
-  },
-  {
-    id: "munich",
-    name: "Munich",
+    id: "berlin",
+    name: "Berlin",
     country: "Germany",
     countryCode: "DEU",
-    iata: "MUC",
-    lat: 48.1351,
-    lng: 11.582,
-    firstVisited: "2025-02-13",
+    iata: "BER",
+    lat: 52.52,
+    lng: 13.405,
+    firstVisited: "2026-04-01",
     blurb:
-      "Industrial AI, robotics, and TUM spin-outs. The European answer to defense + hard tech.",
+      "Europe's contrarian capital — artistically ambitious, technically serious, sceptical of convention. The interrail leg moved through VC offices, an industrial AI hackathon, and startups built around physical-world problems.",
   },
   {
     id: "zurich",
@@ -75,26 +46,16 @@ export const cities: City[] = [
     iata: "ZRH",
     lat: 47.3769,
     lng: 8.5417,
-    firstVisited: "2025-02-16",
+    firstVisited: "2026-04-01",
     blurb:
-      "ETH gravity well. AI research density per capita that rivals anywhere in the world.",
-  },
-  {
-    id: "helsinki",
-    name: "Helsinki",
-    country: "Finland",
-    countryCode: "FIN",
-    iata: "HEL",
-    lat: 60.1699,
-    lng: 24.9384,
-    firstVisited: "2009-01-01",
-    blurb:
-      "Home base. Startup Sauna, Aaltoes, and where every Roam departure begins.",
+      "ETH gravity well. AI research density per capita that rivals anywhere in the world, and a student builder culture — anchored in the Hangar — that directly inspired The Plant.",
   },
 ];
 
 export const places: Place[] = [
-  // San Francisco, February 2026 board trip
+
+  // ─── San Francisco · February 2026 ───────────────────────────────────────
+
   {
     id: "agi-house",
     cityId: "sf",
@@ -484,157 +445,282 @@ export const places: Place[] = [
     monogram: "BAS",
   },
 
-  // Stockholm
+  // ─── Stockholm · April 2026 interrail ────────────────────────────────────
+
   {
-    id: "ef",
+    id: "sse-ventures",
     cityId: "stockholm",
-    name: "Entrepreneur First",
-    kind: "Accelerator",
-    firstVisited: "2024-03-04",
-    description: "Talent-investor model: people, then companies.",
+    name: "SSE Ventures",
+    kind: "Startup Ecosystem",
+    firstVisited: "2026-04-01",
+    website: "https://www.hhs.se/en/outreach/sse-initiatives/sse-business-lab/sse-ventures/",
+    description:
+      "SSE Ventures is the venture and entrepreneurship arm of Stockholm School of Economics, supporting student and alumni founders with funding, coaching, and access to the SSE network.",
     notes: [
-      "Cofounder dating works at scale only with strong filtering up front.",
+      "SSE Ventures illustrated a pattern the delegation encountered more than once on the interrail: a big group dilutes everything. The meeting left almost no trace. Thirty people walking into an organisation is closer to a field trip than a conversation, and the Stockholm School of Economics context — entrepreneurship lab, school-of-business branding — didn't give it enough specificity to cut through. The lesson was less about SSE Ventures and more about format: large-group visits need a very clear agenda, or they shouldn't happen.",
     ],
-    monogram: "EF",
+    monogram: "SSE",
   },
   {
-    id: "creandum",
+    id: "kth-innovation",
     cityId: "stockholm",
-    name: "Creandum",
+    name: "KTH Innovation",
+    kind: "Startup Ecosystem",
+    firstVisited: "2026-04-01",
+    website: "https://www.kth.se/en/om/innovation",
+    description:
+      "KTH Innovation supports students, researchers, and alumni at KTH Royal Institute of Technology through personal coaching, hub access, and flexible programs designed to turn ideas into ventures at any stage.",
+    notes: [
+      "KTH Innovation laid out a model worth examining carefully. The core mechanic is simple: a flexible support program where every student gets access to a personal coach, plus hub access — the Knigringen entry point gives students a physical and social foothold even before they have a project to show. The flexibility matters more than it sounds. Most support programs are cohort-based, which means you apply in January or you wait until September. KTH Innovation pulls in the other direction: support is available when a student has something to work on, not when the calendar says so. The European dimension referenced in the meeting suggested ambitions extending beyond campus. The question it left us with is whether Aaltoes could build something similarly on-demand — not a program people apply to, but a layer people pull from.",
+    ],
+    monogram: "KTHI",
+  },
+  {
+    id: "node-vc",
+    cityId: "stockholm",
+    name: "Node.vc",
     kind: "VC",
-    firstVisited: "2024-03-05",
-    description: "Spotify, Klarna, Voi, the Nordic playbook from origin.",
-    notes: [],
-    monogram: "CR",
+    firstVisited: "2026-04-01",
+    website: "https://node.vc",
+    description:
+      "Node.vc is a Stockholm-based venture capital firm investing in Nordic founders building category-defining technology companies.",
+    notes: [
+      "Node.vc produced one clean insight: when you innovate in an established field, you often can't sell to the incumbents first. The example was accounting — if you build something that replaces how accounting firms work, accounting firms won't buy it. They'll resist, slow-walk, or copy it. The better move is to build your own firm and outcompete them directly. It sounds obvious stated plainly, but hearing it from people who act on it made it land differently than the usual innovation-vs-incumbents framing. The surrounding meeting didn't surface much else, but one sharp idea carried out of the room.",
+    ],
+    monogram: "NVC",
   },
   {
-    id: "klarna",
+    id: "verdane",
     cityId: "stockholm",
-    name: "Klarna",
-    kind: "Startup",
-    firstVisited: "2024-03-05",
-    description: "HQ tour, conversation on going from Stockholm to global.",
-    notes: [],
-    monogram: "K",
+    name: "Verdane",
+    kind: "VC",
+    firstVisited: "2026-04-01",
+    website: "https://verdane.com",
+    description:
+      "Verdane is a specialist growth equity firm partnering with founder-led, technology-enabled businesses across Scandinavia and Northern Europe.",
+    notes: [
+      "Verdane was on the itinerary and the delegation showed up. No specific learnings surfaced. Not every investor visit breaks through — the density of the day, the format of the meeting, and what a fund is willing to share in a first conversation all affect what you walk out with. Listed here for completeness.",
+    ],
+    monogram: "VRD",
   },
   {
-    id: "norrsken",
+    id: "relativity-collective",
     cityId: "stockholm",
-    name: "Norrsken House",
+    name: "Relativity Collective",
+    kind: "Startup Ecosystem",
+    firstVisited: "2026-04-01",
+    website: "https://relativitycollective.com",
+    description:
+      "Relativity Collective brings together a curated group of high-potential students from select European universities for intensive three-day residential programs, with travel and accommodation covered, focused on founder development and cross-university connection.",
+    notes: [
+      "Relativity Collective was the most impressive thing the delegation encountered in Stockholm. The format is deliberately constrained: a small number of selected universities, a tight group of people, a three-day residential program with travel and accommodation covered. The selectivity is the mechanism. When you put a small group of exceptional people together in person for three days with no exit ramp, the conversations that emerge are a different quality from what you get in a larger room. Everyone is staying in the same place, the group is small enough that you actually meet everyone, and the program is short enough that urgency is built in from the start.",
+      "We left convinced this is a format Aaltoes should run. Not copy wholesale, but use as a reference: what would it look like to take our best ten or fifteen people somewhere for three days and let the format do the work? The model doesn't require a big budget. It requires curation and the willingness to keep it small.",
+    ],
+    monogram: "RC",
+  },
+  {
+    id: "kth-ai-society",
+    cityId: "stockholm",
+    name: "KTH AI Society",
+    kind: "Startup Ecosystem",
+    firstVisited: "2026-04-01",
+    website: "https://kthais.com",
+    description:
+      "KTH AI Society is a student-run organisation at KTH Royal Institute of Technology building an active community of AI practitioners through research, events, and hands-on projects.",
+    notes: [
+      "KTH AI Society was a lesson in visit format as much as in content. After a day of large-group meetings, two people went instead of thirty — and went unannounced. The result was a completely different quality of conversation. Without an agenda to prepare, the host just showed what they were actually doing. Walking in without warning trades the formal presentation for the real thing.",
+      "The content matched the format. The standout encounter was a first-year bachelor student already deep into LLM token prediction research — using predicted future tokens as context in a way that had clearly gone beyond the mainstream. We left wanting to get him to the Plant. The operational takeaway was explicit: small visits, sometimes unannounced, produce more than large ones almost every time. Go with two people, don't pre-schedule everything, and let the conversation find its own shape.",
+    ],
+    monogram: "KAI",
+  },
+  {
+    id: "founders-house-stockholm",
+    cityId: "stockholm",
+    name: "Founders House Stockholm",
     kind: "Founder House",
-    firstVisited: "2024-03-06",
-    description: "Impact-aligned community building, coworking + ecosystem in one.",
-    notes: [],
-    monogram: "NRK",
-  },
-
-  // London
-  {
-    id: "index",
-    cityId: "london",
-    name: "Index Ventures",
-    kind: "VC",
-    firstVisited: "2024-10-22",
-    description: "Stage and sector breadth conversation with the partnership.",
-    notes: [],
-    monogram: "IX",
-  },
-  {
-    id: "balderton",
-    cityId: "london",
-    name: "Balderton Capital",
-    kind: "VC",
-    firstVisited: "2024-10-22",
-    description: "European Series A discipline.",
-    notes: [],
-    monogram: "BLD",
-  },
-  {
-    id: "deepmind",
-    cityId: "london",
-    name: "Google DeepMind",
-    kind: "Startup",
-    firstVisited: "2024-10-23",
-    description: "Tour through King's Cross, research-to-product framing.",
-    notes: [],
-    monogram: "DM",
-  },
-  {
-    id: "ef-london",
-    cityId: "london",
-    name: "Entrepreneur First (London)",
-    kind: "Accelerator",
-    firstVisited: "2024-10-24",
-    description: "EF flagship cohort visit.",
-    notes: [],
-    monogram: "EF",
-  },
-
-  // Brussels
-  {
-    id: "eu-startups",
-    cityId: "brussels",
-    name: "EU-Startups",
-    kind: "Event",
-    firstVisited: "2025-02-10",
-    description: "Networking night with TRES, LUTES, and local founders.",
-    notes: [],
-    monogram: "EUS",
-  },
-  {
-    id: "lab-box",
-    cityId: "brussels",
-    name: "Lab Box",
-    kind: "Accelerator",
-    firstVisited: "2025-02-11",
-    description: "Mobility-focused venture builder.",
-    notes: [],
-    monogram: "LB",
-  },
-
-  // Munich
-  {
-    id: "unternehmertum",
-    cityId: "munich",
-    name: "UnternehmerTUM",
-    kind: "Accelerator",
-    firstVisited: "2025-02-13",
-    description: "Europe's largest entrepreneurship center, tied to TUM.",
+    firstVisited: "2026-04-01",
+    website: "https://founders-house.com",
+    description:
+      "Founders House Stockholm is an open coworking and community space for founders and builders, hosting a resident community that spans software, hardware, and deep tech.",
     notes: [
-      "Hardware pipeline that genuinely competes with US peers.",
+      "Founders House Stockholm stood out in comparison to Helsinki. The Helsinki version skews heavily toward software; Stockholm's had more range — someone building flying cars, someone working on hydrogen plants, a wider mix of hardware and physical-world ambition in the building. The delegation used it partly as informal coworking space, which is apparently fine: you can show up and work, and the ambient energy of what's around you is part of what you're there for. One member nearly got locked out on the roof during a remote call. The mix of residents, the access model, and the physical breadth of what's in the building all set a bar the Helsinki version could reasonably aim toward.",
     ],
-    monogram: "UTUM",
-  },
-  {
-    id: "celonis",
-    cityId: "munich",
-    name: "Celonis",
-    kind: "Startup",
-    firstVisited: "2025-02-14",
-    description: "Process-mining giant, talk on going enterprise from day one.",
-    notes: [],
-    monogram: "CL",
+    monogram: "FHS",
   },
 
-  // Zürich
+  // ─── Berlin · April 2026 interrail ───────────────────────────────────────
+
   {
-    id: "eth-spin",
-    cityId: "zurich",
-    name: "ETH AI Center",
-    kind: "Accelerator",
-    firstVisited: "2025-02-16",
-    description: "Spin-out pipeline, deep ML talent, proximity to industry.",
-    notes: [],
-    monogram: "ETH",
+    id: "gtai",
+    cityId: "berlin",
+    name: "Germany Trade & Invest",
+    kind: "Startup Ecosystem",
+    firstVisited: "2026-04-01",
+    website: "https://www.gtai.de/en/invest",
+    description:
+      "Germany Trade & Invest (GTAI) is the economic development agency of the Federal Republic of Germany, supporting foreign companies entering the German market and German companies expanding abroad.",
+    notes: [
+      "Germany Trade & Invest was on the schedule. The group split that day meant attendance was uncertain, and nothing from the meeting made it into the post-trip notes. Listed here for completeness.",
+    ],
+    monogram: "GTAI",
   },
   {
-    id: "lakestar",
-    cityId: "zurich",
-    name: "Lakestar",
+    id: "vireo-ventures",
+    cityId: "berlin",
+    name: "Vireo Ventures",
     kind: "VC",
-    firstVisited: "2025-02-17",
-    description: "Pan-European multi-stage fund, discussion on Nordic deal flow.",
-    notes: [],
-    monogram: "LK",
+    firstVisited: "2026-04-01",
+    website: "https://www.vireo.vc",
+    description:
+      "Vireo Ventures is a Berlin-based impact-focused venture capital firm investing in early-stage startups at the intersection of sustainability and technology.",
+    notes: [
+      "Vireo Ventures appeared on the Berlin itinerary alongside other group B meetings. The split-group format that day created gaps in what people actually attended, and no specific learnings surfaced. Listed here for completeness.",
+    ],
+    monogram: "VV",
+  },
+  {
+    id: "unmoeglich-ai",
+    cityId: "berlin",
+    name: "Unmöglich.AI",
+    kind: "Startup",
+    firstVisited: "2026-04-01",
+    website: "https://unmoglich.ai",
+    description:
+      "Unmöglich.AI is a Berlin-based creative studio building AI-generated micro dramas, commercials, and artistically driven video content — working at the frontier of generative AI and aesthetic production.",
+    notes: [
+      "Unmöglich.AI was a deliberately different kind of visit. The team — originally from LUT, now based in Berlin — builds artsy AI: micro dramas, generated commercials, work that sits at the intersection of technology and aesthetics rather than technology and growth. They were 'very artsy, not startup-y at all,' and the delegation found that gap interesting rather than disqualifying. The mindset was what stood out — a way of working with AI shaped by artistic intention rather than venture timelines or market-sizing. The honest reflection afterward: the combination of genuine artistic ambition and serious AI capability would be even more powerful pointed at a growth business. But as a proof that the tools don't have to serve the same goals everyone else is chasing, it landed.",
+    ],
+    monogram: "UMG",
+  },
+  {
+    id: "htgf",
+    cityId: "berlin",
+    name: "HTGF",
+    kind: "VC",
+    firstVisited: "2026-04-01",
+    website: "https://www.htgf.de",
+    description:
+      "High-Tech Gründerfonds (HTGF) is Germany's most active seed investor, backing technology startups across deep tech, digital, and life sciences with a focus on pre-seed and seed stages.",
+    notes: [
+      "HTGF produced the most contentious discussion of the Berlin leg. The framing from the floor: at pre-seed, a partner 'goes a lot on vibes.' That triggered real debate about whether intuition is a legitimate investment signal or a laundered version of pattern-matching bias. The concrete example made it harder to dismiss: when founders don't visibly respect each other in small interactions — even during a first meeting — that's real information. It doesn't show up in the deck.",
+      "The comparison to Jessica Livingston's observer role at YC — the ability to veto a deal based on interpersonal dynamics — suggested this is less idiosyncratic than it sounds, and closer to a skill that's genuinely hard to formalise. We left less certain that 'just trust the data' is always the right answer at the earliest stages, where the data is thin and the person in front of you is most of what you have.",
+    ],
+    monogram: "HTGF",
+  },
+  {
+    id: "berlin-finai-hackathon",
+    cityId: "berlin",
+    name: "Berlin Agentic FinAI Hackathon",
+    kind: "Event",
+    firstVisited: "2026-04-01",
+    website: "https://lu.ma/ili241vv",
+    description:
+      "A Berlin hackathon focused on agentic AI applications in financial services, bringing together developers and builders to prototype the next generation of AI-powered fintech tools.",
+    notes: [
+      "The Berlin hackathon produced an outcome that's hard to engineer. The delegation didn't win any of the conventional categories — their entry, a large knowledge graph, was by their own assessment probably too ambitious for the time constraint and took too long to load. But after the main awards, the organisers added a special recognition anyway. The technical reflection was self-aware: the knowledge graph was 'way too big.' The outcome was positive regardless. Hackathons reward a certain kind of swing, and a swing that doesn't land cleanly can still attract attention when the ambition behind it is legible.",
+    ],
+    monogram: "BAH",
+  },
+  {
+    id: "bahn-express",
+    cityId: "berlin",
+    name: "Bahn Express",
+    kind: "Startup",
+    firstVisited: "2026-04-01",
+    website: "https://www.bahnexpress.com",
+    description:
+      "Bahn Express is a Berlin-based startup scaling a multi-city service model, known for its operational discipline of placing founders on the ground in each new market they enter.",
+    notes: [
+      "Bahn Express was a compact case study in what taking scaling seriously actually looks like operationally. Every time the company expands to a new location, the founders go themselves. Not remotely, not through a local hire — they move. The delegation found this striking because it's the kind of commitment most startup writing describes but few teams actually practice. The underlying logic is clear once you say it: culture doesn't travel by memo, and what you've built in one city doesn't automatically replicate in the next. If the founders aren't there in person to build it again, something different grows. The visit was brief, but the principle was portable.",
+    ],
+    monogram: "BEX",
+  },
+  {
+    id: "redstone-vc",
+    cityId: "berlin",
+    name: "Redstone VC",
+    kind: "VC",
+    firstVisited: "2026-04-01",
+    website: "https://redstone.vc",
+    description:
+      "Redstone is a Berlin-based venture capital firm investing in early-stage European tech startups, with a network spanning Berlin, Munich, and beyond.",
+    notes: [
+      "Redstone VC was one of the most memorable visits of the Berlin leg, partly by accident. A partner stopped by for what was supposed to be five minutes — he stayed for an hour because the board meeting he'd been sitting in was, his word, 'insanely boring.' The conversation that followed became an extended lesson in what happens when you ask genuinely intrusive questions instead of polite ones. One probe opened into a full story: barely enough money for baby food in the early 2000s, grinding for years, the texture of what actually happened. That kind of depth doesn't surface in a normal first meeting. The explicit takeaway the delegation walked away with was simple: ask the uncomfortable question. If someone is willing to answer, the answer is almost always the most useful thing in the room.",
+    ],
+    monogram: "RVC",
+  },
+
+  // ─── Zürich · April 2026 interrail ───────────────────────────────────────
+
+  {
+    id: "eth-entrepreneurship-club",
+    cityId: "zurich",
+    name: "ETH Entrepreneurship Club",
+    kind: "Startup Ecosystem",
+    firstVisited: "2026-04-01",
+    website: "https://www.entrepreneur-club.org",
+    description:
+      "The ETH Entrepreneurship Club is a student-run organisation at ETH Zürich connecting entrepreneurially minded students with mentors, investors, and fellow founders through events, workshops, and matchmaking programs.",
+    notes: [
+      "The ETH Entrepreneurship Club meeting had a quietly useful dynamic: both sides thought the other had it figured out. Aaltoes looked at ETHEC and saw institutional reach and established structure. ETHEC looked at Aaltoes and saw something they felt they were still building toward. Neither read was accurate, which made the conversation more honest than most peer-society exchanges tend to be. The highlight was a matchmaking event ETHEC had organised — speed-dating format, everyone talkative, arranged well enough that the structure didn't feel forced. The format is worth importing: enough scaffolding to create encounters, loose enough to let them go somewhere real.",
+    ],
+    monogram: "ETHEC",
+  },
+  {
+    id: "forgis",
+    cityId: "zurich",
+    name: "Forgis",
+    kind: "Startup",
+    firstVisited: "2026-04-01",
+    website: "https://www.forgis.com",
+    description:
+      "Forgis builds software for industrial automation, helping manufacturers integrate and operate robotic systems with deep domain expertise in physical-world environments.",
+    notes: [
+      "Forgis builds automation software for industrial clients, but the office is full of ABB robot arms. That's not decorative — it's the thesis. The explicit learning from the visit was sharp: even if you're fundamentally a software company, if your product runs on hardware, you need to own and operate the hardware yourself. Not because it's cheaper or more efficient, but because the edge cases, the failure modes, and the integration problems only reveal themselves when you're actually running the physical system. Developing industrial automation software remotely, against simulated environments, is a reliable way to build something that works in demos and breaks in production. The team had internalised this, which showed in how precisely they could describe what their clients actually needed.",
+    ],
+    monogram: "FRG",
+  },
+  {
+    id: "eth-hangar",
+    cityId: "zurich",
+    name: "ETH Hangar",
+    kind: "Startup Ecosystem",
+    firstVisited: "2026-04-01",
+    website: "https://partnerships.ethz.ch/the-hangar.html",
+    description:
+      "ETH Hangar is a student and startup space at ETH Zürich where focus projects and early ventures work on hardware, aerospace, robotics, and deep tech — often side by side.",
+    notes: [
+      "ETH Hangar was the most formative visit of the Zürich leg, and in a broader sense one of the most formative for Aaltoes overall. The Plant came out of visiting it. The environment is a mix of student builder teams and early startups coexisting in the same physical space, working on things that span the full range: hydrogen airplane iterations moving through electric, then gas hydrogen, then liquid hydrogen; rockets; hyperloops; security robots. What landed hardest wasn't any single project. It was seeing students who looked like Aaltoes members building things that were genuinely difficult — and treating that difficulty as normal.",
+      "The delegation went back a second day. The lesson wasn't just 'build a space like this.' It was that the space is downstream of the people who fill it, and those people show up because the culture expects ambition to be the baseline. 'I could live there' was the honest reaction. The Hangar doesn't inspire you to build — it makes building seem like the obvious thing to do.",
+    ],
+    monogram: "HNG",
+  },
+  {
+    id: "eth-robotics-club",
+    cityId: "zurich",
+    name: "ETH Robotics Club",
+    kind: "Startup Ecosystem",
+    firstVisited: "2026-04-01",
+    website: "https://www.ethrobotics.ch",
+    description:
+      "ETH Robotics Club is a student organisation at ETH Zürich building humanoid robots, robot arms, autonomous vehicles, and other ambitious physical-computing systems inside the ETH Hangar.",
+    notes: [
+      "ETH Robotics Club operates inside the Hangar, and in that context it represented one of the highest-signal student organisations the delegation encountered anywhere on the trip. The growth — from founding to the scale visible at the time of the visit, in roughly a year — was striking on its own. The projects gave the second impression: a humanoid robot, a robot arm (which the delegation got to try), a self-driving RC car moving fast enough that the demo felt genuinely real. Getting into the technical specifics of each project, rather than sitting through elevator pitches, was what made the time worthwhile. Students building ambitious things and describing what they were actually doing, without filtering for an audience that might not follow.",
+    ],
+    monogram: "ERC",
+  },
+  {
+    id: "aithon-robotics",
+    cityId: "zurich",
+    name: "Aithon Robotics",
+    kind: "Startup",
+    firstVisited: "2026-04-01",
+    website: "https://aithon-robotics.ch",
+    description:
+      "Aithon Robotics builds large industrial drones for infrastructure inspection and preemptive maintenance, using suction-based attachment to access and sample bridges and other hard-to-reach structures.",
+    notes: [
+      "Aithon Robotics was the cleanest pivot story of the interrail. The original idea — a drone for search-and-rescue in extreme conditions, able to operate when helicopters couldn't — was, on reflection, essentially impossible: if the weather grounds helicopters, it grounds drones too. The team knew this and built prototypes anyway, pushing the concept to its edge, and when the student focus project ended they had a platform with real capabilities and a clearer sense of where to point it. The pivot was to preemptive bridge maintenance: large drones with a suction attachment that lets them cling to bridge surfaces, take structural samples, and catch problems before a bridge fails. The line from 'insanely ambitious, probably too delusional' student project to a fundable startup with a sensible market is exactly the kind of origin story that makes the Hangar worth having. Some of the best companies start with a mission that can't work.",
+    ],
+    monogram: "ATH",
   },
 ];
