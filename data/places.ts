@@ -454,6 +454,11 @@ export const places: Place[] = [
     kind: "Startup Ecosystem",
     firstVisited: "2026-04-01",
     website: "https://www.hhs.se/en/outreach/sse-initiatives/sse-business-lab/sse-ventures/",
+    photos: [
+      "https://www.hhs.se/contentassets/6359c8090a334926a0c8d7033aaf2dcb/vo2.jpeg",
+      "https://www.hhs.se/globalassets/sse-image-bank/school-life/sse-michael-rakowitz-photomikaelolsson_2507-2.jpg",
+      "https://www.hhs.se/globalassets/sse-image-bank/school-life/school-life_studying.jpg",
+    ],
     description:
       "SSE Ventures is the venture and entrepreneurship arm of Stockholm School of Economics, supporting student and alumni founders with funding, coaching, and access to the SSE network.",
     notes: [
@@ -468,6 +473,11 @@ export const places: Place[] = [
     kind: "Startup Ecosystem",
     firstVisited: "2026-04-01",
     website: "https://www.kth.se/en/om/innovation",
+    photos: [
+      "https://www.kth.se/polopoly_fs/1.1267354.1691655966!/image/BIlder%20webbheader-bredare7.jpg",
+      "https://www.kth.se/polopoly_fs/1.1270671.1692344271!/image/KTH%20Innovation%20alumni%202023.png",
+      "https://www.kth.se/polopoly_fs/1.1430432.1760095676!/image/communityfilm-omslag.jpg",
+    ],
     description:
       "KTH Innovation supports students, researchers, and alumni at KTH Royal Institute of Technology through personal coaching, hub access, and flexible programs designed to turn ideas into ventures at any stage.",
     notes: [
@@ -482,6 +492,11 @@ export const places: Place[] = [
     kind: "VC",
     firstVisited: "2026-04-01",
     website: "https://node.vc",
+    photos: [
+      "https://cdn.prod.website-files.com/6347dcaee587e0f0b9adfd4d/6347dcaee587e05245adfd75_pexels-anete-lusina-4792727.jpg",
+      "https://cdn.prod.website-files.com/6347dcaee587e0f0b9adfd4d/6347dcaee587e07108adfd9f_smarter_workplaces.jpg",
+      "https://cdn.prod.website-files.com/6347dcaee587e0f0b9adfd4d/6a311e37593f55a15688a038_CHOSEN_DSC_6897.jpg",
+    ],
     description:
       "Node.vc is a Stockholm-based venture capital firm investing in Nordic founders building category-defining technology companies.",
     notes: [
@@ -510,6 +525,10 @@ export const places: Place[] = [
     kind: "Startup Ecosystem",
     firstVisited: "2026-04-01",
     website: "https://relativitycollective.com",
+    photos: [
+      "https://relativitycollective.com/assets/hero-johannes-B3S-BjI5.png",
+      "https://relativitycollective.com/assets/relativity-collective-logo-BHIHy111.png",
+    ],
     description:
       "Relativity Collective brings together a curated group of high-potential students from select European universities for intensive three-day residential programs, with travel and accommodation covered, focused on founder development and cross-university connection.",
     notes: [
@@ -525,6 +544,10 @@ export const places: Place[] = [
     kind: "Startup Ecosystem",
     firstVisited: "2026-04-01",
     website: "https://kthais.com",
+    photos: [
+      "https://kthais.com/_next/image?url=%2Fimages%2Frecruitment-post.png&w=3840&q=75",
+      "https://kthais.com/_next/image?url=%2Fimages%2Fhistory%2Fplaceholder-04.jpg&w=3840&q=75",
+    ],
     description:
       "KTH AI Society is a student-run organisation at KTH Royal Institute of Technology building an active community of AI practitioners through research, events, and hands-on projects.",
     notes: [
@@ -540,6 +563,11 @@ export const places: Place[] = [
     kind: "Founder House",
     firstVisited: "2026-04-01",
     website: "https://founders-house.com",
+    photos: [
+      "https://founders-house.com/assets/event-daniel-ek-BLBT6TDW.jpeg",
+      "https://founders-house.com/assets/event-niklas-zennstrom-OTgeh5Ex.jpeg",
+      "https://founders-house.com/assets/event-harry-stebbings-BBXF2gAy.jpeg",
+    ],
     description:
       "Founders House Stockholm is an open coworking and community space for founders and builders, hosting a resident community that spans software, hardware, and deep tech.",
     notes: [
@@ -557,6 +585,11 @@ export const places: Place[] = [
     kind: "Startup Ecosystem",
     firstVisited: "2026-04-01",
     website: "https://www.gtai.de/en/invest",
+    photos: [
+      "https://www.gtai.de/resource/image/1025798/64x15/1920/450/113af16579a2d2f745942b50d7620e83/B11098C70E265420AEFE56868952C735/stageteaser-invest-brandenburgertor-2500x586-neu.jpg",
+      "https://www.gtai.de/resource/image/796812/16x9/610/343/c9114d3eec5d61b0fa0d71ea644c888/D96A4EB64C25543CEDE1C5F9BC03BC1B/rf-adobe-230581692-rz.jpg",
+      "https://www.gtai.de/resource/image/781944/16x9/610/343/a05d8f4bee815069774bb7b434cf4703/D4C3BB131D8D237D4021996EA89E3E3A/rf-getty-1214952895-rz.jpg",
+    ],
     description:
       "Germany Trade & Invest (GTAI) is the economic development agency of the Federal Republic of Germany, supporting foreign companies entering the German market and German companies expanding abroad.",
     notes: [
@@ -571,6 +604,11 @@ export const places: Place[] = [
     kind: "VC",
     firstVisited: "2026-04-01",
     website: "https://www.vireo.vc",
+    photos: [
+      "https://www.vireo.vc/wp-content/uploads/2026/06/Vireo-Team.jpg",
+      "https://www.vireo.vc/wp-content/uploads/2024/11/Marco-Pionix.jpg",
+      "https://www.vireo.vc/wp-content/uploads/2024/11/Frederic-Merz.jpg",
+    ],
     description:
       "Vireo Ventures is a Berlin-based impact-focused venture capital firm investing in early-stage startups at the intersection of sustainability and technology.",
     notes: [
@@ -585,6 +623,10 @@ export const places: Place[] = [
     kind: "Startup",
     firstVisited: "2026-04-01",
     website: "https://unmoglich.ai",
+    photos: [
+      "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=768,fit=crop/AzGrDB57Dqi2zxxN/_202408061728-_-untitled-design-4-mP4QOOxj2vUy0GNr.png",
+      "https://assets.zyrosite.com/AzGrDB57Dqi2zxxN/13mb-mePJMEjVOLHJ5Lqz.gif",
+    ],
     description:
       "Unmöglich.AI is a Berlin-based creative studio building AI-generated micro dramas, commercials, and artistically driven video content, working at the frontier of generative AI and aesthetic production.",
     notes: [
@@ -599,6 +641,11 @@ export const places: Place[] = [
     kind: "VC",
     firstVisited: "2026-04-01",
     website: "https://www.htgf.de",
+    photos: [
+      "https://www.htgf.de/wp-content/uploads/2026/04/ATMOS_PHOENIX2_in_orbit_1.png",
+      "https://www.htgf.de/wp-content/uploads/2026/02/Alpha-Artist-Rendering-c-Proxima-Fusion.jpg",
+      "https://www.htgf.de/wp-content/uploads/2026/01/BenjaminOlszewski_Playlist1920_1.jpg",
+    ],
     description:
       "High-Tech Gründerfonds (HTGF) is Germany's most active seed investor, backing technology startups across deep tech, digital, and life sciences with a focus on pre-seed and seed stages.",
     notes: [
@@ -614,6 +661,9 @@ export const places: Place[] = [
     kind: "Event",
     firstVisited: "2026-04-01",
     website: "https://lu.ma/ili241vv",
+    photos: [
+      "https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/event-covers/7e/d1998eb3-f287-4d41-a5da-6bc784ab99ba.png",
+    ],
     description:
       "A Berlin hackathon focused on agentic AI applications in financial services, bringing together developers and builders to prototype the next generation of AI-powered fintech tools.",
     notes: [
@@ -628,6 +678,11 @@ export const places: Place[] = [
     kind: "Startup",
     firstVisited: "2026-04-01",
     website: "https://www.bahnexpress.com",
+    photos: [
+      "https://www.bahnexpress.com/images/bahn-team-bw.jpg",
+      "https://www.bahnexpress.com/images/landing-portal-new-order-bg.png",
+      "https://www.bahnexpress.com/car.png",
+    ],
     description:
       "Bahn Express is a Berlin-based startup scaling a multi-city service model, known for its operational discipline of placing founders on the ground in each new market they enter.",
     notes: [
@@ -642,6 +697,11 @@ export const places: Place[] = [
     kind: "VC",
     firstVisited: "2026-04-01",
     website: "https://redstone.vc",
+    photos: [
+      "https://cdn.prod.website-files.com/64cba05ccf5f6aa4193a71b3/64cba05ccf5f6aa4193a7363_chuttersnap-KWqolT5x98Q-unsplash.webp",
+      "https://cdn.prod.website-files.com/64cba05ccf5f6aa4193a71b3/694a4d130d2b09fe7012e256_polina-kuzovkova-0zvHERVxnkk-unsplash.jpg",
+      "https://cdn.prod.website-files.com/64cba05ccf5f6aa4193a71b3/64cff897cbf69e8894acd895_pexels-thisisengineering-3913025.jpg",
+    ],
     description:
       "Redstone is a Berlin-based venture capital firm investing in early-stage European tech startups, with a network spanning Berlin, Munich, and beyond.",
     notes: [
@@ -659,6 +719,11 @@ export const places: Place[] = [
     kind: "Startup Ecosystem",
     firstVisited: "2026-04-01",
     website: "https://www.entrepreneur-club.org",
+    photos: [
+      "https://www.entrepreneur-club.org/assets/EC/InCube.jpeg",
+      "https://www.entrepreneur-club.org/assets/events/boost.jpg",
+      "https://www.entrepreneur-club.org/assets/events/fun18.jpg",
+    ],
     description:
       "The ETH Entrepreneurship Club is a student-run organisation at ETH Zürich connecting entrepreneurially minded students with mentors, investors, and fellow founders through events, workshops, and matchmaking programs.",
     notes: [
@@ -673,6 +738,11 @@ export const places: Place[] = [
     kind: "Startup",
     firstVisited: "2026-04-01",
     website: "https://www.forgis.com",
+    photos: [
+      "https://ai.ethz.ch/news-and-events/ai-center-news/2025/11/forgis-industrial-intelligence-from-zurich/_jcr_content/articleLeadImage/image.imageformat.carousel.1746067474.jpg",
+      "https://ai.ethz.ch/news-and-events/ai-center-news/2025/11/forgis-industrial-intelligence-from-zurich/_jcr_content/wide_content/image_307667016/image.imageformat.1286.761566153.jpg",
+      "https://roboticsandautomationnews.com/wp-content/uploads/2025/11/forgis-tech-1.jpeg",
+    ],
     description:
       "Forgis builds software for industrial automation, helping manufacturers integrate and operate robotic systems with deep domain expertise in physical-world environments.",
     notes: [
@@ -687,6 +757,11 @@ export const places: Place[] = [
     kind: "Startup Ecosystem",
     firstVisited: "2026-04-01",
     website: "https://partnerships.ethz.ch/the-hangar.html",
+    photos: [
+      "https://partnerships.ethz.ch/the-hangar/_jcr_content/par/slideshow_copy/images/item0.imageformat.imagegallery5.1885455614.jpg",
+      "https://partnerships.ethz.ch/the-hangar/_jcr_content/par/slideshow_copy/images/item1.imageformat.imagegallery5.463484834.jpg",
+      "https://partnerships.ethz.ch/the-hangar/_jcr_content/par/slideshow_copy/images/item2.imageformat.imagegallery5.730076549.jpg",
+    ],
     description:
       "ETH Hangar is a student and startup space at ETH Zürich where focus projects and early ventures work on hardware, aerospace, robotics, and deep tech, often side by side.",
     notes: [
@@ -702,6 +777,10 @@ export const places: Place[] = [
     kind: "Startup Ecosystem",
     firstVisited: "2026-04-01",
     website: "https://www.ethrobotics.ch",
+    photos: [
+      "https://cdn.prod.website-files.com/684da9878de6aa970ea1187c/688f3af80a3bb7c0db88f783_bostondynamics-Picsart-AiImageEnhancer%202.png",
+      "https://cdn.prod.website-files.com/684da9878de6aa970ea1187c/6a135e0c117bd9c5fd057b49_IMG_5858.jpg",
+    ],
     description:
       "ETH Robotics Club is a student organisation at ETH Zürich building humanoid robots, robot arms, autonomous vehicles, and other ambitious physical-computing systems inside the ETH Hangar.",
     notes: [
@@ -716,6 +795,11 @@ export const places: Place[] = [
     kind: "Startup",
     firstVisited: "2026-04-01",
     website: "https://aithon-robotics.ch",
+    photos: [
+      "https://aithon-robotics.ch/wp-content/uploads/2026/01/DJI_20260116182403_0021_D-scaled-300x169.jpg",
+      "https://aithon-robotics.ch/wp-content/uploads/2026/02/DSC07052-300x200.jpg",
+      "https://aithon-robotics.ch/wp-content/uploads/2025/07/SLO-300x169.jpg",
+    ],
     description:
       "Aithon Robotics builds large industrial drones for infrastructure inspection and preemptive maintenance, using suction-based attachment to access and sample bridges and other hard-to-reach structures.",
     notes: [
